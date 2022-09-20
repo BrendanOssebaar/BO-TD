@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class GotoPoint : MonoBehaviour
 {
-    public GameObject[] waypoints;
-    public float speed = 1;
-    void Update()
+    public static Transform[] points;
+    
+
+    private void Awake()
+    {
+        points = new Transform[transform.childCount];
+        for (int i = 0; i < points.Length; i++)
+        {
+            points[i] = transform.GetChild(i);
+        }
+    }
+
+
+    /*void Update()
     {
         
-        for(int i = 0; i < waypoints.Length; i++)
+        if(transform.position == waypoints[i])
         {
             transform.position = waypoints[i].transform.position* speed * Time.deltaTime;
         }
@@ -18,7 +29,7 @@ public class GotoPoint : MonoBehaviour
     void Start()
     {
         
-    }
+    }*/
 
     
 }
