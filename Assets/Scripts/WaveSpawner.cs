@@ -12,7 +12,7 @@ public class WaveSpawner : MonoBehaviour
     public Text WaveCounter;
 
     [SerializeField] private float countdown = 3f;
-    [SerializeField] private int waveNumber = -1;
+    [SerializeField] private int waveNumber = 0;
 
     void Start()
     {
@@ -41,7 +41,7 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
         
-        
+
     }
     void spawnEnemy()
     {

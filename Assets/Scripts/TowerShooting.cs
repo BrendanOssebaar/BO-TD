@@ -4,9 +4,22 @@ using UnityEngine;
 
 public class TowerShooting : MonoBehaviour
 {
-    [SerializeField]private Transform target;
+    [SerializeField] private Transform target;
+
+    [Header("Attributes")]
+
     public float range = 10f;
+    public float firerate = 1f;
+    public float firecountdown = 0f;
+
+    [Header("Unity Setup Fields")]
+
     public string enemyTag = "Enemy";
+    public Transform parttorotate;
+    public GameObject bulletprefab;
+    public Transform firepoint;
+                
+    
 
     public void Start()
     {
@@ -46,6 +59,23 @@ public class TowerShooting : MonoBehaviour
         {
             return;
         }
+
+        Vector3 dir = target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
+        parttorotate.rotation = lookRotation;
+
+        if(firecountdown <= 0f)
+        {
+            Shoot();
+            firecountdown = 1f / firerate;
+        }
+        firecountdown -= Time.deltaTime;
+
+    }
+    void Shoot()
+    {
+        GameObject bulletGO = (GameObject)Instantiate(bulletprefab, firepoint.position, firepoint.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
     }
 
 
