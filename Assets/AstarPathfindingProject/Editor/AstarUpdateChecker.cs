@@ -108,7 +108,7 @@ namespace Pathfinding {
 
 		static AstarUpdateChecker() {
 			// Add a callback so that we can parse the message when it has been downloaded
-			EditorApplication.update += UpdateCheckLoop;
+			//EditorApplication.update += UpdateCheckLoop;
 			EditorBase.getDocumentationURL = () => GetURL("documentation");
 		}
 
@@ -132,7 +132,7 @@ namespace Pathfinding {
 		}
 
 		/// <summary>Initiate a check for updates now, regardless of when the last check was done</summary>
-		public static void CheckForUpdatesNow () {
+		/*public static void CheckForUpdatesNow () {
 			lastUpdateCheck = System.DateTime.UtcNow.AddDays(-5);
 
 			// Remove the callback if it already exists
@@ -151,14 +151,14 @@ namespace Pathfinding {
 			if (!CheckForUpdates()) {
 				EditorApplication.update -= UpdateCheckLoop;
 			}
-		}
+		}*/
 
 		/// <summary>
 		/// Checks for updates if there was some time since last check.
 		/// It must be called repeatedly to ensure that the result is processed.
 		/// Returns: True if an update check is progressing (WWW request)
 		/// </summary>
-		static bool CheckForUpdates () {
+		/*static bool CheckForUpdates () {
 			if (updateCheckDownload != null && updateCheckDownload.isDone) {
 				if (!string.IsNullOrEmpty(updateCheckDownload.error)) {
 					Debug.LogWarning("There was an error checking for updates to the A* Pathfinding Project\n" +
@@ -186,7 +186,7 @@ namespace Pathfinding {
 			}
 
 			return updateCheckDownload != null || minutesUntilUpdate < 10;
-		}
+		}*/
 
 		static void DownloadVersionInfo () {
 			var script = AstarPath.active != null ? AstarPath.active : GameObject.FindObjectOfType(typeof(AstarPath)) as AstarPath;

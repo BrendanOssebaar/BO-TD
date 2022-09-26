@@ -25,9 +25,11 @@ public class Enemy : MonoBehaviour
     }
     void GetNextWaypoint()
     {
-        if(waypointindex >= GotoPoint.points.Length - 1)
+        if(waypointindex == GotoPoint.points.Length - 1)
         {
-            waypointindex = -1;
+            // dealDamage();
+            Destroy(gameObject);
+            return;
         }
         waypointindex++;
         target = GotoPoint.points[waypointindex];

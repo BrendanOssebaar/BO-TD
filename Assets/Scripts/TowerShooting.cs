@@ -76,6 +76,11 @@ public class TowerShooting : MonoBehaviour
     {
         GameObject bulletGO = (GameObject)Instantiate(bulletprefab, firepoint.position, firepoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+        if(bullet != null)
+        {
+            bullet.seek(target);
+        }
     }
 
 
