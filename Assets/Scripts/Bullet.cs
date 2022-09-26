@@ -6,6 +6,10 @@ public class Bullet : MonoBehaviour
 {
     public Transform target;
     public float speed;
+    public float lightningDMG;
+    public float AcidDMG;
+    public float FireDMG;
+    public float DMG;
 
     public void seek(Transform _target)
     {
@@ -39,7 +43,6 @@ public class Bullet : MonoBehaviour
     {
         Debug.Log("Hit");
         Destroy(gameObject);
-        Destroy(target);
         return;
     }
 
