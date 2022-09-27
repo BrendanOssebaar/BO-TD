@@ -30,6 +30,7 @@ public class Enemy : MonoBehaviour
         {
             GetNextWaypoint();
         }
+        checkHP();
     }
     void GetNextWaypoint()
     {
@@ -41,5 +42,14 @@ public class Enemy : MonoBehaviour
         }
         waypointindex++;
         target = GotoPoint.points[waypointindex];
+    }
+    void checkHP()
+    {
+        
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+            return;
+        }
     }
 }
