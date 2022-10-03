@@ -9,7 +9,7 @@ public class Node : MonoBehaviour
     private Renderer rend;
     private GameObject turret;
     public GameObject TurretToBuild;
-
+    public bool canvas;
 
 
 
@@ -17,12 +17,14 @@ public class Node : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
+        canvas = false;
     }
     private void OnMouseDown()
     {
         if(turret != null)
         {
-            Instantiate(turret);
+            canvas = true;
+            //Instantiate(turret);
         }
         GameObject turretToBuild = TurretToBuild;
         turret = (GameObject)Instantiate(turretToBuild);
