@@ -21,14 +21,21 @@ public class Node : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if(turret != null)
+
+
+
+
+
+
+
+        /*if(turret != null)
         {
             canvas = true;
             //Instantiate(turret);
         }
         GameObject turretToBuild = TurretToBuild;
         turret = (GameObject)Instantiate(turretToBuild);
-        turret.transform.position = new Vector3(transform.position.x, transform.position.y+1, transform.position.z);
+        turret.transform.position = new Vector3(transform.position.x, transform.position.y+1, transform.position.z);*/
     }
     void OnMouseEnter()
     {

@@ -34,14 +34,22 @@ public class Enemy : MonoBehaviour
     }
     void GetNextWaypoint()
     {
-        if(waypointindex == GotoPoint.points.Length - 1)
+        //heb ik nog een volgende waypoint?
+        //zo ja, ga naar die waypoint
+        //zo nee, verwijder mijzelf
+        if(waypointindex+1 < GotoPoint.points.Length)
         {
-            // dealDamage();
-            Destroy(gameObject);
-            return;
+            waypointindex++;
+            target = GotoPoint.points[waypointindex];
         }
-        waypointindex++;
-        target = GotoPoint.points[waypointindex];
+        else
+        {
+            //Do dmg to player
+            Destroy(gameObject);
+        }
+
+
+
     }
     void checkHP()
     {
