@@ -132,5 +132,5 @@ MonoBehaviour:
   lightningDMG: 0
   AcidDMG: 0
   FireDMG: 0
-  DMG: 0
+  DMG: 20
   impactbullet: {fileID: 160699294392966526, guid: d29aec4e956a38e44902333cf58b9532, type: 3}

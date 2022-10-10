@@ -15,6 +15,7 @@ public class Towers : MonoBehaviour
 
         Vector3 objBounds = obj.GetComponent<Renderer>().bounds.extents;
         obj.transform.position += new Vector3(0, objBounds.y / 2, 0);
+        Node.buildMenuFire.SetActive(False);
         
     }
 

@@ -9,22 +9,34 @@ public class Node : MonoBehaviour
     private Renderer rend;
     private GameObject turret;
     public GameObject TurretToBuild;
-    public bool canvas;
+    public GameObject buildMenu;
+    public GameObject buildMenuFire;
+    public GameObject buildMenuLightning;
+    public GameObject buildMenuNormal;
+    public GameObject buildMenuAcid;
 
 
 
     void Start()
     {
+        buildMenu.SetActive(false);
+        buildMenuFire.SetActive(false);
+        buildMenuAcid.SetActive(false);
+        buildMenuLightning.SetActive(false);
+        buildMenuNormal.SetActive(false);
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
-        canvas = false;
+        
     }
     private void OnMouseDown()
     {
 
 
-
-
+        buildMenu.SetActive(true);
+        buildMenuFire.SetActive(true);
+        buildMenuAcid.SetActive(true);
+        buildMenuLightning.SetActive(true);
+        buildMenuNormal.SetActive(true);
 
 
 
@@ -37,6 +49,7 @@ public class Node : MonoBehaviour
         turret = (GameObject)Instantiate(turretToBuild);
         turret.transform.position = new Vector3(transform.position.x, transform.position.y+1, transform.position.z);*/
     }
+
     void OnMouseEnter()
     {
         rend.material.color = hoverColor;
