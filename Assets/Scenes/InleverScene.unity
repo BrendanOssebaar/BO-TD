@@ -1013,6 +1013,16 @@ Transform:
   m_Father: {fileID: 90824266}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!64 &269981426 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 766336558615350030, guid: b890d1aaec17c0b4aa2c34222815463f, type: 3}
+  m_PrefabInstance: {fileID: 2908681199318731139}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &269981427 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 766336558615350031, guid: b890d1aaec17c0b4aa2c34222815463f, type: 3}
+  m_PrefabInstance: {fileID: 2908681199318731139}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &307691560
 GameObject:
   m_ObjectHideFlags: 0
@@ -6154,9 +6164,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1092204325}
     m_Modifications:
+    - target: {fileID: -2071908251423249795, guid: b890d1aaec17c0b4aa2c34222815463f, type: 3}
+      propertyPath: meshcoll
+      value: 
+      objectReference: {fileID: 269981426}
+    - target: {fileID: -2071908251423249795, guid: b890d1aaec17c0b4aa2c34222815463f, type: 3}
+      propertyPath: meshrend
+      value: 
+      objectReference: {fileID: 269981427}
     - target: {fileID: 3014297824268596308, guid: b890d1aaec17c0b4aa2c34222815463f, type: 3}
       propertyPath: m_Name
       value: TurretPlaceEmpty
+      objectReference: {fileID: 0}
+    - target: {fileID: 3014297824268596308, guid: b890d1aaec17c0b4aa2c34222815463f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3014297824268691572, guid: b890d1aaec17c0b4aa2c34222815463f, type: 3}
       propertyPath: m_RootOrder

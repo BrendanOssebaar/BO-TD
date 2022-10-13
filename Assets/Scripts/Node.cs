@@ -7,36 +7,49 @@ public class Node : MonoBehaviour
     private Color startColor;
     public Color hoverColor;
     private Renderer rend;
-    private GameObject turret;
-    public GameObject TurretToBuild;
     public GameObject buildMenu;
     public GameObject buildMenuFire;
     public GameObject buildMenuLightning;
     public GameObject buildMenuNormal;
     public GameObject buildMenuAcid;
+    public bool cantplaceturret = false;
 
-
-
-    void Start()
+    public void deactivateall()
     {
         buildMenu.SetActive(false);
         buildMenuFire.SetActive(false);
         buildMenuAcid.SetActive(false);
         buildMenuLightning.SetActive(false);
         buildMenuNormal.SetActive(false);
+    }
+    public void activateall()
+    {
+        buildMenu.SetActive(true);
+        buildMenuFire.SetActive(true);
+        buildMenuAcid.SetActive(true);
+        buildMenuLightning.SetActive(true);
+        buildMenuNormal.SetActive(true);
+    }
+    public void checkbuild()
+    {
+        if(GetComponentInChildren<Towers>().turretbuild == true)
+        {
+            cantplaceturret = true;
+        }
+    }
+    
+    void Start()
+    {
+        deactivateall();
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
         
     }
     private void OnMouseDown()
     {
-
-
-        buildMenu.SetActive(true);
-        buildMenuFire.SetActive(true);
-        buildMenuAcid.SetActive(true);
-        buildMenuLightning.SetActive(true);
-        buildMenuNormal.SetActive(true);
+        activateall();
+        checkbuild();
+        
 
 
 
@@ -53,6 +66,7 @@ public class Node : MonoBehaviour
     void OnMouseEnter()
     {
         rend.material.color = hoverColor;
+        checkbuild();
     }
     void OnMouseExit()
     {
