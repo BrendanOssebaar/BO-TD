@@ -8,7 +8,7 @@ public class WaveSpawner : MonoBehaviour
     public GameObject enemyprefab;
     private GameObject enemy;
     public Transform spawnPoint;
-    public float timebetweenwaves = 30f;
+    public float timebetweenwaves;
     public Text WaveCountdownText;
     public Text WaveCounter;
 
@@ -27,6 +27,10 @@ public class WaveSpawner : MonoBehaviour
         {
             StartCoroutine(SpawnWave());
             countdown = timebetweenwaves;
+        }
+        if(waveNumber == 10)
+        {
+            countdown = 100f;
         }
         countdown -= Time.deltaTime;
         WaveCountdownText.text = Mathf.Round(countdown).ToString();
