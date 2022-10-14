@@ -112,12 +112,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 970bf1168f9a7bf49bc58cf7b82c336f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 1
   health: 100
   armor: 0
   Eshield: 0
   AcidPlating: 0
   fireProofing: 1
+  slider: {fileID: 0}
+  maxValue: 0
 --- !u!1 &1580424789258153039
 GameObject:
   m_ObjectHideFlags: 0

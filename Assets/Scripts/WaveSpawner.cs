@@ -8,11 +8,11 @@ public class WaveSpawner : MonoBehaviour
     public GameObject enemyprefab;
     private GameObject enemy;
     public Transform spawnPoint;
-    public float timebetweenwaves = 5f;
+    public float timebetweenwaves = 30f;
     public Text WaveCountdownText;
     public Text WaveCounter;
 
-    [SerializeField] private float countdown = 3f;
+    [SerializeField] private float countdown = 10f;
     [SerializeField] private int waveNumber = 0;
 
     void Start()

@@ -261,7 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 100
-  lightningDMG: 10
+  lightningDMG: 20
   AcidDMG: 0
   FireDMG: 0
   DMG: 10

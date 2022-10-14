@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/InleverScene.unity
+    guid: 6c9e97599fb8e074b9d30c6ad31829f4
   m_configObjects: {}

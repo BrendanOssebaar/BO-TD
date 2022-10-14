@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
         if(target == null)
         {
             Destroy(gameObject);
-            return;
+            
         }
         Vector3 dir = target.position - transform.position;
         float distancethisFrame = speed * Time.deltaTime;
@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour
         if(dir.magnitude <= distancethisFrame)
         {
             HitTarget();
-            return;
+            
         }
         transform.Translate(dir.normalized * distancethisFrame,Space.World);
     }
@@ -53,6 +53,7 @@ public class Bullet : MonoBehaviour
     public void dealdmg()
     {
         target.GetComponent<Enemy>().health = target.GetComponent<Enemy>().health - DMG;
+
 
     }
 
