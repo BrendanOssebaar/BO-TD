@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     public float speed = 1;
     private Transform target;
     private int waypointindex = 0;
-    public int health;
+    public float health;
     public bool armor;
     public bool Eshield;
     public bool AcidPlating;
     public bool fireProofing;
+    public Slider slider;
+    public float maxValue = 100;
 
+    public void setMaxLife(int HP)
+    {
+        slider.maxValue = HP;
+    }
+
+    public void setLife(int hp)
+    {
+        slider.value = hp;
+    }
 
 
     void Start()

@@ -7,6 +7,7 @@ public class Node : MonoBehaviour
     private Color startColor;
     public Color hoverColor;
     private Renderer rend;
+    public GameObject[] turretbuildbuttons;
     public GameObject buildMenu;
     public GameObject buildMenuFire;
     public GameObject buildMenuLightning;
@@ -30,13 +31,7 @@ public class Node : MonoBehaviour
         buildMenuLightning.SetActive(true);
         buildMenuNormal.SetActive(true);
     }
-    public void checkbuild()
-    {
-        if(GetComponentInChildren<Towers>().turretbuild == true)
-        {
-            cantplaceturret = true;
-        }
-    }
+    
     
     void Start()
     {
@@ -48,7 +43,7 @@ public class Node : MonoBehaviour
     private void OnMouseDown()
     {
         activateall();
-        checkbuild();
+       
         
 
 
@@ -66,7 +61,7 @@ public class Node : MonoBehaviour
     void OnMouseEnter()
     {
         rend.material.color = hoverColor;
-        checkbuild();
+        
     }
     void OnMouseExit()
     {

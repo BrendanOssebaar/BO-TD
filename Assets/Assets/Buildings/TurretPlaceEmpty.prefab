@@ -146,7 +146,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3014297824268691572}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -48.87, y: 0, z: 0}
 --- !u!33 &766336558615350032
 MeshFilter:
@@ -402,7 +402,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3014297824268691572}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -48.87, y: 0, z: 0}
 --- !u!33 &766336559614119667
 MeshFilter:
@@ -656,8 +656,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 766336558615350027}
   - {fileID: 766336559614119662}
+  - {fileID: 766336558615350027}
   - {fileID: 766336559799394290}
   - {fileID: 766336559350194658}
   - {fileID: 766336558442911714}
@@ -741,14 +741,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
-  meshrend:
-  - {fileID: 766336558615350031}
-  - {fileID: 766336559614119666}
-  - {fileID: 766336559799394294}
-  - {fileID: 766336559350194662}
-  - {fileID: 766336558442911712}
-  meshcoll:
-  - {fileID: 0}
+  turretbuildbuttons:
+  - {fileID: 766336559614119661}
+  - {fileID: 766336558615350026}
+  - {fileID: 766336559799394289}
+  - {fileID: 766336559350194657}
   buildMenu: {fileID: 766336558442911709}
   buildMenuFire: {fileID: 766336559614119661}
   buildMenuLightning: {fileID: 766336559799394289}
