@@ -118,8 +118,8 @@ MonoBehaviour:
   Eshield: 0
   AcidPlating: 0
   fireProofing: 0
-  slider: {fileID: 0}
-  maxValue: 0
+  slider: {fileID: 7092208357456376163}
+  maxValue: 100
 --- !u!1 &1580424789258153039
 GameObject:
   m_ObjectHideFlags: 0
