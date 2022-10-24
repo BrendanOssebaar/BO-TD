@@ -13,23 +13,17 @@ public class Enemy : MonoBehaviour
     public bool Eshield;
     public bool AcidPlating;
     public bool fireProofing;
-    public Slider slider;
-    public float maxValue = 100;
+    public HPBar hpbar;
+    public float maxValue;
+    public float currentHP;
 
-    public void setMaxLife(int HP)
-    {
-        slider.maxValue = HP;
-    }
-
-    public void setLife(int hp)
-    {
-        slider.value = hp;
-    }
-
-
+    
     void Start()
     {
         target = GotoPoint.points[0];
+        maxValue = 100;
+        hpbar.setMaxLife(maxValue);
+        currentHP = maxValue;
     }
 
     // Update is called once per frame
@@ -62,6 +56,11 @@ public class Enemy : MonoBehaviour
 
 
 
+    }
+    public void getdmg(float getDMG)
+    {
+        currentHP -= getDMG;
+        hpbar.setLife(currentHP);
     }
     void checkHP()
     {

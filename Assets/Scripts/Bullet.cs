@@ -19,21 +19,21 @@ public class Bullet : MonoBehaviour
     }
     void Start()
     {
-        
+        DMG = DMG + lightningDMG + AcidDMG + FireDMG;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(target == null)
-        {
-            Destroy(gameObject);
-            
-        }
+        
         Vector3 dir = target.position - transform.position;
         float distancethisFrame = speed * Time.deltaTime;
+        if (target == null)
+        {
+            Destroy(gameObject);
 
-        if(dir.magnitude <= distancethisFrame)
+        }
+        if (dir.magnitude <= distancethisFrame)
         {
             HitTarget();
             
@@ -53,6 +53,7 @@ public class Bullet : MonoBehaviour
     public void dealdmg()
     {
         target.GetComponent<Enemy>().health = target.GetComponent<Enemy>().health - DMG;
+        //target.GetComponent<Enemy>().getdmg(DMG);
 
 
     }

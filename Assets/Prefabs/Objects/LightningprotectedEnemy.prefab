@@ -118,8 +118,9 @@ MonoBehaviour:
   Eshield: 1
   AcidPlating: 0
   fireProofing: 0
-  slider: {fileID: 7092208357456376163}
+  hpbar: {fileID: 0}
   maxValue: 100
+  currentHP: 0
 --- !u!1 &1580424789258153039
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3081590546534303578}
   - component: {fileID: 7092208357456376163}
+  - component: {fileID: 8575709140096398962}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -424,6 +426,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8575709140096398962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8804156323028900817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021e91dd1db5e6041a51b7d444c681d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 7092208357456376163}
 --- !u!1 &8843589717827023026
 GameObject:
   m_ObjectHideFlags: 0
