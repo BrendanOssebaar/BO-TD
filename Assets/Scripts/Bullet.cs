@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+public enum planetType { Acid, Fire, Lightning, Armor}
 public class Bullet : MonoBehaviour
 {
+
+    public planetType PlanetType;
     public Transform target;
     public float speed;
     public float lightningDMG;
     public float AcidDMG;
     public float FireDMG;
     public float DMG;
+    public float dmg;
     public GameObject impactbullet;
     
 
@@ -19,7 +22,7 @@ public class Bullet : MonoBehaviour
     }
     void Start()
     {
-        DMG = DMG + lightningDMG + AcidDMG + FireDMG;
+        dmg = DMG + lightningDMG + AcidDMG + FireDMG;
     }
 
     // Update is called once per frame
@@ -52,8 +55,8 @@ public class Bullet : MonoBehaviour
     }
     public void dealdmg()
     {
-        target.GetComponent<Enemy>().health = target.GetComponent<Enemy>().health - DMG;
-        //target.GetComponent<Enemy>().getdmg(DMG);
+        
+        target.GetComponent<Enemy>().getdmg(dmg, PlanetType);
 
 
     }

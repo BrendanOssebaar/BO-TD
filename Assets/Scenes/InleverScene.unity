@@ -3364,7 +3364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyprefab: {fileID: 1486146847147689849, guid: fd67643ee81d3ae41828cd959cbb8301, type: 3}
   spawnPoint: {fileID: 1115649223}
-  timebetweenwaves: 30
+  timebetweenwaves: 10
   WaveCountdownText: {fileID: 122747627}
   WaveCounter: {fileID: 692516868}
   countdown: 5

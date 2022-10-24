@@ -5,7 +5,7 @@ using UnityEngine;
 public class Towers : MonoBehaviour
 {
     public GameObject towerselected;
-    public GameObject boundingBox;
+    
     
     public void OnMouseDown()
     {

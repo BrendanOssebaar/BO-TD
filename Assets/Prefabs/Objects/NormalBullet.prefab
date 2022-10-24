@@ -127,10 +127,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4182889085a431448642fda6eb5f73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlanetType: 3
   target: {fileID: 0}
   speed: 100
   lightningDMG: 0
   AcidDMG: 0
   FireDMG: 0
   DMG: 20
+  dmg: 0
   impactbullet: {fileID: 160699294392966526, guid: d29aec4e956a38e44902333cf58b9532, type: 3}

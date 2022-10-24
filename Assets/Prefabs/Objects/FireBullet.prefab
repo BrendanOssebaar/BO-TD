@@ -128,12 +128,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4182889085a431448642fda6eb5f73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlanetType: 1
   target: {fileID: 0}
   speed: 100
   lightningDMG: 0
   AcidDMG: 0
   FireDMG: 20
   DMG: 10
+  dmg: 0
   impactbullet: {fileID: 1739285848076908, guid: aa502400f11084d36aef2b88a2177b3e, type: 3}
 --- !u!1 &6807265065087002050
 GameObject:

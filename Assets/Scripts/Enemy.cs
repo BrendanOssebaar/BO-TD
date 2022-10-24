@@ -5,23 +5,25 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    public planetType PlanetType;
     public float speed = 1;
     private Transform target;
     private int waypointindex = 0;
-    public float health;
     public bool armor;
     public bool Eshield;
     public bool AcidPlating;
     public bool fireProofing;
     public HPBar hpbar;
-    public float maxValue;
+    public float maxValue = 100;
     public float currentHP;
+    public float worth;
+    [SerializeField]
+    private float resistance = 2;
 
     
     void Start()
     {
         target = GotoPoint.points[0];
-        maxValue = 100;
         hpbar.setMaxLife(maxValue);
         currentHP = maxValue;
     }
@@ -57,15 +59,23 @@ public class Enemy : MonoBehaviour
 
 
     }
-    public void getdmg(float getDMG)
+    public void getdmg(float getDMG, planetType type)
     {
-        currentHP -= getDMG;
+        if(PlanetType == type)
+        {
+            currentHP -= getDMG / resistance;
+        }
+        else
+        {
+            currentHP -= getDMG;
+        }
+
         hpbar.setLife(currentHP);
     }
     void checkHP()
     {
         
-        if(health <= 0)
+        if(currentHP <= 0)
         {
             Destroy(gameObject);
             
