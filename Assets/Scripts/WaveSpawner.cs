@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public Dictionary<EnemyType, GameObject> enemies;
+    public List<Wavegroups> waveinfo;
+    public List<GameObject> enemies;
 
     public GameObject enemyprefab;
     private GameObject enemy;
@@ -41,18 +42,18 @@ public class WaveSpawner : MonoBehaviour
 
     IEnumerator SpawnWave()
     {
-        waveNumber++;
-        for (int i = 0; i < waveNumber; i++)
+        
+        for (int i = 0; i < waveinfo[waveNumber].enemyTypes.Count; i++)
         {
-            spawnEnemy();
+            spawnEnemy(i);
             yield return new WaitForSeconds(0.5f);
         }
-        
+        waveNumber++;
 
     }
-    void spawnEnemy()
+    void spawnEnemy(int type)
     {
-        GameObject Enemy = enemyprefab;
+        GameObject Enemy = enemies[(int)waveinfo[waveNumber].enemyTypes[type]];
         enemy = (GameObject)Instantiate(Enemy);
         enemy.transform.position = spawnPoint.transform.position;
         enemy.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);

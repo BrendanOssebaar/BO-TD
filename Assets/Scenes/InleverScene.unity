@@ -3362,6 +3362,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710d0711b03d7c3489f52d4490e9c678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveinfo:
+  - {fileID: 11400000, guid: 35fc9bb04431cdc43af7d381b7d39d1f, type: 2}
+  - {fileID: 11400000, guid: 36ec15edd81eca54d9c28c7b5f2f1851, type: 2}
+  - {fileID: 11400000, guid: ac04766362adbfb44be99d8317a07eae, type: 2}
+  - {fileID: 11400000, guid: f82cc37cddedbba4cab554ca9d050aa0, type: 2}
+  - {fileID: 11400000, guid: 1e5bce806b5d24849ba5227cf1463838, type: 2}
+  - {fileID: 11400000, guid: 92508840f9b74ac4a815779f14cf8554, type: 2}
+  - {fileID: 11400000, guid: 16f62bfc85bfe02459ed50e3df833f43, type: 2}
+  - {fileID: 11400000, guid: b89773df3de842b43858a087b4a22a79, type: 2}
+  - {fileID: 11400000, guid: 5aa64a11c88802b439d798b86b480047, type: 2}
+  - {fileID: 11400000, guid: 6c724cc8b17dab6479378ffe32077735, type: 2}
+  enemies:
+  - {fileID: 1486146847147689849, guid: fd67643ee81d3ae41828cd959cbb8301, type: 3}
+  - {fileID: 1486146847147689849, guid: 74e1d1b3b3034354bb3e4ca11d895dec, type: 3}
+  - {fileID: 1486146847147689849, guid: 4ac93207afed89a48a0cd1dd6b66503c, type: 3}
+  - {fileID: 1486146847147689849, guid: 1ace010bbbdf05d4898436a7de9b643d, type: 3}
+  - {fileID: 1486146847147689849, guid: 6acb83daf978a9642be1a9afca20d75d, type: 3}
   enemyprefab: {fileID: 1486146847147689849, guid: fd67643ee81d3ae41828cd959cbb8301, type: 3}
   spawnPoint: {fileID: 1115649223}
   timebetweenwaves: 10

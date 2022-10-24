@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public enum EnemyType { Acid, Fire, Lightning, Armor}
+public enum EnemyType { Acid, Fire, Lightning, Armor, Normal}
 public class Bullet : MonoBehaviour
 {
 
@@ -28,14 +28,14 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        Vector3 dir = target.position - transform.position;
-        float distancethisFrame = speed * Time.deltaTime;
         if (target == null)
         {
             Destroy(gameObject);
-
+            return;
         }
+        Vector3 dir = target.position - transform.position;
+        float distancethisFrame = speed * Time.deltaTime;
+        
         if (dir.magnitude <= distancethisFrame)
         {
             HitTarget();
