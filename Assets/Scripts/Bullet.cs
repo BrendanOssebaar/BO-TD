@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public enum planetType { Acid, Fire, Lightning, Armor}
+public enum EnemyType { Acid, Fire, Lightning, Armor}
 public class Bullet : MonoBehaviour
 {
 
-    public planetType PlanetType;
+    public EnemyType enemytype;
     public Transform target;
     public float speed;
     public float lightningDMG;
@@ -56,7 +56,7 @@ public class Bullet : MonoBehaviour
     public void dealdmg()
     {
         
-        target.GetComponent<Enemy>().getdmg(dmg, PlanetType);
+        target.GetComponent<Enemy>().getdmg(dmg, enemytype);
 
 
     }

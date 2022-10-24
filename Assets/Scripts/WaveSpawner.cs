@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
+    public Dictionary<EnemyType, GameObject> enemies;
+
     public GameObject enemyprefab;
     private GameObject enemy;
     public Transform spawnPoint;

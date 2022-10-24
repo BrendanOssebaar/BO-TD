@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    public planetType PlanetType;
+    public EnemyType enemytype;
     public float speed = 1;
     private Transform target;
     private int waypointindex = 0;
@@ -59,9 +59,9 @@ public class Enemy : MonoBehaviour
 
 
     }
-    public void getdmg(float getDMG, planetType type)
+    public void getdmg(float getDMG, EnemyType type)
     {
-        if(PlanetType == type)
+        if(enemytype == type)
         {
             currentHP -= getDMG / resistance;
         }
