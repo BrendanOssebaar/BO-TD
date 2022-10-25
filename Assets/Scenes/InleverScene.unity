@@ -3379,11 +3379,13 @@ MonoBehaviour:
   - {fileID: 1486146847147689849, guid: 4ac93207afed89a48a0cd1dd6b66503c, type: 3}
   - {fileID: 1486146847147689849, guid: 1ace010bbbdf05d4898436a7de9b643d, type: 3}
   - {fileID: 1486146847147689849, guid: 6acb83daf978a9642be1a9afca20d75d, type: 3}
+  - {fileID: 2508009706492755615, guid: 82a1465b2c40f7d46ab653c70991cd55, type: 3}
   enemyprefab: {fileID: 1486146847147689849, guid: fd67643ee81d3ae41828cd959cbb8301, type: 3}
   spawnPoint: {fileID: 1115649223}
   timebetweenwaves: 10
   WaveCountdownText: {fileID: 122747627}
   WaveCounter: {fileID: 692516868}
+  wavefree: 0
   countdown: 5
   waveNumber: 0
 --- !u!1001 &1159305189

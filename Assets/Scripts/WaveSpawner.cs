@@ -7,13 +7,13 @@ public class WaveSpawner : MonoBehaviour
 {
     public List<Wavegroups> waveinfo;
     public List<GameObject> enemies;
-
     public GameObject enemyprefab;
     private GameObject enemy;
     public Transform spawnPoint;
     public float timebetweenwaves;
     public Text WaveCountdownText;
     public Text WaveCounter;
+    public bool wavefree = true;
 
     [SerializeField] private float countdown = 10f;
     [SerializeField] private int waveNumber = 0;
@@ -22,14 +22,26 @@ public class WaveSpawner : MonoBehaviour
     {
         
     }
-
+    public void Wavefree()
+    {
+        if(GameObject.FindGameObjectWithTag("Enemy") == null)
+        {
+            wavefree = true;
+        }
+        else
+        {
+            wavefree = false;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
-        if(countdown <= 0f)
+        Wavefree();
+        if(countdown <= 0f && wavefree == true)
         {
             StartCoroutine(SpawnWave());
             countdown = timebetweenwaves;
+            wavefree = false;
         }
         if(waveNumber == 10)
         {
@@ -42,11 +54,10 @@ public class WaveSpawner : MonoBehaviour
 
     IEnumerator SpawnWave()
     {
-        
         for (int i = 0; i < waveinfo[waveNumber].enemyTypes.Count; i++)
         {
             spawnEnemy(i);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
         }
         waveNumber++;
 

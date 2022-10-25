@@ -9,10 +9,6 @@ public class Enemy : MonoBehaviour
     public float speed = 1;
     private Transform target;
     private int waypointindex = 0;
-    public bool armor;
-    public bool Eshield;
-    public bool AcidPlating;
-    public bool fireProofing;
     public HPBar hpbar;
     public float maxValue = 100;
     public float currentHP;

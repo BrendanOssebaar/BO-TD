@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4182889085a431448642fda6eb5f73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlanetType: 1
+  enemytype: 1
   target: {fileID: 0}
   speed: 100
   lightningDMG: 0
