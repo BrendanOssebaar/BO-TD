@@ -3328,6 +3328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1115649223}
   - component: {fileID: 1115649224}
+  - component: {fileID: 1115649225}
   m_Layer: 0
   m_Name: Spawnpoint
   m_TagString: Untagged
@@ -3386,8 +3387,23 @@ MonoBehaviour:
   WaveCountdownText: {fileID: 122747627}
   WaveCounter: {fileID: 692516868}
   wavefree: 0
+  startmoney: 0
   countdown: 5
   waveNumber: 0
+--- !u!114 &1115649225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115649222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ae6b4b9c195744e9af4a62330a5682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 100
+  cash: {fileID: 1115649224}
 --- !u!1001 &1159305189
 PrefabInstance:
   m_ObjectHideFlags: 0

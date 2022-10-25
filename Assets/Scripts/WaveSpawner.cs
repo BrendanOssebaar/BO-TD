@@ -14,6 +14,7 @@ public class WaveSpawner : MonoBehaviour
     public Text WaveCountdownText;
     public Text WaveCounter;
     public bool wavefree = true;
+    public float startmoney;
 
     [SerializeField] private float countdown = 10f;
     [SerializeField] private int waveNumber = 0;
@@ -43,7 +44,7 @@ public class WaveSpawner : MonoBehaviour
             countdown = timebetweenwaves;
             wavefree = false;
         }
-        if(waveNumber == 10)
+        if(waveNumber == 11)
         {
             countdown = 100f;
         }

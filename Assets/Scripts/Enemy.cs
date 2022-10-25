@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     public float worth;
     [SerializeField]
     private float resistance = 2;
+    public Money mons;
 
     
     void Start()
@@ -22,6 +23,7 @@ public class Enemy : MonoBehaviour
         target = GotoPoint.points[0];
         hpbar.setMaxLife(maxValue);
         currentHP = maxValue;
+        mons = FindObjectOfType<Money>();
     }
 
     // Update is called once per frame
@@ -74,7 +76,7 @@ public class Enemy : MonoBehaviour
         if(currentHP <= 0)
         {
             Destroy(gameObject);
-            
+            mons.money += worth;
         }
     }
 }

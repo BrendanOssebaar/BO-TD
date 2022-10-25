@@ -193,8 +193,9 @@ MonoBehaviour:
   hpbar: {fileID: 6548724765483842924}
   maxValue: 300
   currentHP: 0
-  worth: 0
+  worth: 300
   resistance: 2
+  mons: {fileID: 0}
 --- !u!1 &2583904503436667628
 GameObject:
   m_ObjectHideFlags: 0

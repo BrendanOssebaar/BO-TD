@@ -238,8 +238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerselected: {fileID: 4934436253203150018, guid: 32314f459dc007c4690a3dbbc72a212e, type: 3}
-  boundingBox: {fileID: 0}
-  turretbuild: 0
+  towerworth: 75
+  stocks: {fileID: 0}
 --- !u!1 &766336559350194657
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,8 +366,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerselected: {fileID: 1810786113661398611, guid: 65d96af3f3877f740a42a2e2568a1713, type: 3}
-  boundingBox: {fileID: 0}
-  turretbuild: 0
+  towerworth: 75
+  stocks: {fileID: 0}
 --- !u!1 &766336559614119661
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,8 +494,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerselected: {fileID: 944920608435986427, guid: 4e9978f3749a7e64fb24e1fd5212ce77, type: 3}
-  boundingBox: {fileID: 0}
-  turretbuild: 0
+  towerworth: 75
+  stocks: {fileID: 0}
 --- !u!1 &766336559799394289
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,8 +622,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerselected: {fileID: 1160479197270282292, guid: 46fcfb825749dbf45af065839eb8a8f2, type: 3}
-  boundingBox: {fileID: 0}
-  turretbuild: 0
+  towerworth: 75
+  stocks: {fileID: 0}
 --- !u!1 &3014297824268596308
 GameObject:
   m_ObjectHideFlags: 0

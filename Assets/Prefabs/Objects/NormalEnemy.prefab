@@ -114,15 +114,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemytype: 4
   speed: 3
-  armor: 0
-  Eshield: 0
-  AcidPlating: 0
-  fireProofing: 0
   hpbar: {fileID: 1720219198926352722}
   maxValue: 100
   currentHP: 0
-  worth: 0
+  worth: 15
   resistance: 1
+  mons: {fileID: 0}
 --- !u!1 &1580424789258153039
 GameObject:
   m_ObjectHideFlags: 0
