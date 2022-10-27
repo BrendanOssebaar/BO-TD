@@ -113,13 +113,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemytype: 1
-  speed: 3
+  waveSpawner: {fileID: 0}
+  speed: 4
+  playerdmg: 1
   hpbar: {fileID: 490863916861257500}
   maxValue: 100
   currentHP: 0
   worth: 25
   resistance: 2
   mons: {fileID: 0}
+  playerHealth: {fileID: 0}
 --- !u!1 &1580424789258153039
 GameObject:
   m_ObjectHideFlags: 0

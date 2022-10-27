@@ -14,6 +14,7 @@ public class Node : MonoBehaviour
     public GameObject buildMenuNormal;
     public GameObject buildMenuAcid;
     public bool cantplaceturret = false;
+    public GameObject canvas;
 
     public void deactivateall()
     {
@@ -22,6 +23,7 @@ public class Node : MonoBehaviour
         buildMenuAcid.SetActive(false);
         buildMenuLightning.SetActive(false);
         buildMenuNormal.SetActive(false);
+        canvas.SetActive(false);
     }
     public void activateall()
     {
@@ -30,6 +32,7 @@ public class Node : MonoBehaviour
         buildMenuAcid.SetActive(true);
         buildMenuLightning.SetActive(true);
         buildMenuNormal.SetActive(true);
+        canvas.SetActive(true);
     }
     
     

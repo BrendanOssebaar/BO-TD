@@ -7,7 +7,8 @@ public class Enemy : MonoBehaviour
 {
     public EnemyType enemytype;
     public WaveSpawner waveSpawner;
-    public float speed = 1;
+    public float speed;
+    public int playerdmg;
     private Transform target;
     private int waypointindex = 0;
     public HPBar hpbar;
@@ -17,15 +18,17 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float resistance = 2;
     public Money mons;
+    public PlayerHealth playerHealth;
+    
 
     
     void Start()
     {
-        //maxValue = waveSpawner.waveNumber * 10 + 50;
         target = GotoPoint.points[0];
         hpbar.setMaxLife(maxValue);
         currentHP = maxValue;
         mons = FindObjectOfType<Money>();
+        playerHealth = GameObject.Find("Playerstats").GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -52,12 +55,17 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            //Do dmg to player
+            dealDMG();
             Destroy(gameObject);
         }
 
 
 
+    }
+    public void dealDMG()
+    {
+        Debug.Log(playerHealth);
+        playerHealth.PlayerHP = playerHealth.PlayerHP -= playerdmg;
     }
     public void getdmg(float getDMG, EnemyType type)
     {

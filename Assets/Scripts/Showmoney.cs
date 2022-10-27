@@ -8,7 +8,8 @@ public class Showmoney : MonoBehaviour
     public GameObject hovermoney;
     private Text money;
     private Towers towerstonks;
-    void Start()
+    
+    /*void Start()
     {
         money.enabled = money.enabled;
         money = hovermoney.GetComponent<Text>();
@@ -29,5 +30,5 @@ public class Showmoney : MonoBehaviour
     private void OnMouseExit()
     {
         money.enabled = !money.enabled;
-    }
+    }*/
 }
