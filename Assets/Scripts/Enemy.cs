@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     public EnemyType enemytype;
+    public WaveSpawner waveSpawner;
     public float speed = 1;
     private Transform target;
     private int waypointindex = 0;
     public HPBar hpbar;
-    public float maxValue = 100;
+    public int maxValue;
     public float currentHP;
     public float worth;
     [SerializeField]
@@ -20,6 +21,7 @@ public class Enemy : MonoBehaviour
     
     void Start()
     {
+        //maxValue = waveSpawner.waveNumber * 10 + 50;
         target = GotoPoint.points[0];
         hpbar.setMaxLife(maxValue);
         currentHP = maxValue;

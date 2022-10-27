@@ -17,7 +17,7 @@ public class WaveSpawner : MonoBehaviour
     public float startmoney;
 
     [SerializeField] private float countdown = 10f;
-    [SerializeField] private int waveNumber = 0;
+    [SerializeField] public int waveNumber = 0;
 
     void Start()
     {
