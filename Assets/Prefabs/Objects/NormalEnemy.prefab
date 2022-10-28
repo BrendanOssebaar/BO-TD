@@ -119,7 +119,7 @@ MonoBehaviour:
   hpbar: {fileID: 1720219198926352722}
   maxValue: 100
   currentHP: 0
-  worth: 15
+  worth: 10
   resistance: 1
   mons: {fileID: 0}
   playerHealth: {fileID: 0}
