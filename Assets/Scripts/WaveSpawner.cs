@@ -45,7 +45,7 @@ public class WaveSpawner : MonoBehaviour
             countdown = timebetweenwaves;
             wavefree = false;
         }
-        if(waveNumber == 10)
+        else if(waveNumber == 10 && GameObject.FindGameObjectWithTag("Enemy")==null)
         {
             SceneManager.LoadScene(2);
         }
