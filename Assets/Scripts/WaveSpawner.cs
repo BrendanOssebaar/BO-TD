@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -44,9 +45,9 @@ public class WaveSpawner : MonoBehaviour
             countdown = timebetweenwaves;
             wavefree = false;
         }
-        if(waveNumber == 11)
+        if(waveNumber == 10)
         {
-            countdown = 100f;
+            SceneManager.LoadScene(2);
         }
         countdown -= Time.deltaTime;
         WaveCountdownText.text = Mathf.Round(countdown).ToString();
