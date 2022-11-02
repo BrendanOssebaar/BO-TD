@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f3b5cd2f7d82b44ad0efcb59086d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 20
   rb: {fileID: 9309788}
   cam: {fileID: 9309786}
 --- !u!1001 &10050128
@@ -3605,7 +3605,7 @@ MonoBehaviour:
   - {fileID: 2508009706492755615, guid: 82a1465b2c40f7d46ab653c70991cd55, type: 3}
   enemyprefab: {fileID: 1486146847147689849, guid: fd67643ee81d3ae41828cd959cbb8301, type: 3}
   spawnPoint: {fileID: 1115649223}
-  timebetweenwaves: 10
+  timebetweenwaves: 20
   WaveCountdownText: {fileID: 122747627}
   WaveCounter: {fileID: 692516868}
   wavefree: 0
