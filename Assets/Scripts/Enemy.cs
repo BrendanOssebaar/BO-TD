@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public WaveSpawner waveSpawner;
     public float speed;
     public int playerdmg;
+    [SerializeField]
     private Transform target;
     private int waypointindex = 0;
     public HPBar hpbar;
@@ -19,6 +20,7 @@ public class Enemy : MonoBehaviour
     private float resistance = 2;
     public Money mons;
     public PlayerHealth playerHealth;
+    public float turnspeed = 1f;
     
 
     
@@ -36,10 +38,14 @@ public class Enemy : MonoBehaviour
     {
         Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
-
-        if(Vector3.Distance(transform.position, target.position) <= 0.3f)
+        Vector3 turntotarget = target.position - transform.position;
+        float turnstep = turnspeed * Time.deltaTime;
+        Vector3 newDirection = Vector3.RotateTowards(transform.forward, turntotarget, turnstep, 1f);
+        transform.rotation = Quaternion.LookRotation(newDirection);
+        if (Vector3.Distance(transform.position, target.position) <= 0.3f)
         {
             GetNextWaypoint();
+            
         }
         checkHP();
     }
@@ -52,6 +58,7 @@ public class Enemy : MonoBehaviour
         {
             waypointindex++;
             target = GotoPoint.points[waypointindex];
+            
         }
         else
         {

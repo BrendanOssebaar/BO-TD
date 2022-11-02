@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 20f;
     Vector3 movement;
     // Vector3 mousePos;
     [SerializeField] private Rigidbody rb;

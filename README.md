@@ -1,3 +1,21 @@
+Mijn TD game
+
+Welcome <Player Name>,
+
+In this game you must protect your hive from angry robots.
+You do this by placing towers on the designated plots.
+But be carefull, some robots are protected against a certain type of damage, so place your turrets with that in mind.
+It costs Bio Points to place towers, which you can collect by destroying robots along the path towards your base.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  ```mermaid
  graph TD
     A((Start)) -->|Wait 5 seconds| B(Spawn Wave)
