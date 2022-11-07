@@ -3981,7 +3981,34 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114314176820451766, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114809996914918486, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114583512057880198, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114872352964983450, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114787040288284550, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114496584313842618, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114061045644789546, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114054726718150458, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114642355251540844, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114353657314150154, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114298443646762964, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114036042901135180, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114511709819225466, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114077572799838856, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114105737356342756, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114611890010148288, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114534902423202906, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114511304703708200, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114376814542214786, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114027068198408754, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114537777535827818, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114364275112151160, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114209627953453170, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114867003452487240, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114598523434084942, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114458164574646936, guid: ff47dae10207c4167afe342487709c7e, type: 3}
+    - {fileID: 114825945097854874, guid: ff47dae10207c4167afe342487709c7e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ff47dae10207c4167afe342487709c7e, type: 3}
 --- !u!1001 &1294460493
 PrefabInstance:
