@@ -12,7 +12,9 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private Transform target;
     private int waypointindex = 0;
+    private bool doubledhp;
     public HPBar hpbar;
+    private bool tripledhp;
     public int maxValue;
     public float currentHP;
     public float worth;
@@ -26,11 +28,14 @@ public class Enemy : MonoBehaviour
     
     void Start()
     {
+        doubledhp = false;
+        tripledhp = false;
         target = GotoPoint.points[0];
         hpbar.setMaxLife(maxValue);
         currentHP = maxValue;
         mons = FindObjectOfType<Money>();
         playerHealth = GameObject.Find("Playerstats").GetComponent<PlayerHealth>();
+        waveSpawner = GameObject.Find("Spawnpoint").GetComponent<WaveSpawner>();
     }
 
     // Update is called once per frame
@@ -48,6 +53,7 @@ public class Enemy : MonoBehaviour
             
         }
         checkHP();
+
     }
     void GetNextWaypoint()
     {
@@ -87,13 +93,32 @@ public class Enemy : MonoBehaviour
 
         hpbar.setLife(currentHP);
     }
+    /*public float doubleHP()
+    {
+        if(waveSpawner.waveNumber == 3)
+        {
+            currentHP = currentHP * 2;
+            return currentHP;
+        }
+    }*/
     void checkHP()
     {
-        
-        if(currentHP <= 0)
+        if (waveSpawner.waveNumber == 3 && doubledhp == false)
+        {
+            currentHP = currentHP * 2;
+            doubledhp = true;
+        }
+        if (waveSpawner.waveNumber == 6 && tripledhp == false)
+        {
+            currentHP = currentHP * 2;
+            tripledhp = true;
+        }
+        if (currentHP <= 0)
         {
             Destroy(gameObject);
             mons.money += worth;
         }
+        
+        
     }
 }
